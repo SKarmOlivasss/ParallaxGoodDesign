@@ -25,7 +25,10 @@
         <a href="#sec" id="btn">Explore</a>
         <img id="mountains_front" src="images/mountains_front.png" alt="">
     </section>
-    <div class="sec" id="sec">
+    <div id="parent">
+        <div id="gradient">
+        </div>
+        <div class="sec" id="sec">
         <h2>Parallax Scroll Effect</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, vel. Doloribus alias amet deserunt quaerat, 
             fuga eligendi non nostrum, dignissimos cum saepe quae deleniti eos ducimus. Excepturi animi quibusdam ut. Lorem, ipsum dolor sit amet 
@@ -63,7 +66,9 @@
             Consequatur perferendis voluptatem, esse adipisci deleniti molestiae vel soluta dicta!
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe debitis cum expedita quod odit quibusdam? Voluptatem quia molestias totam 
             inventore? Saepe voluptatibus ipsam consectetur, sequi repellendus porro alias consequuntur vitae?</p>
+        </div>
     </div>
+
     <script>
         let stars = document.getElementById('stars');    
         let moon = document.getElementById('moon');
@@ -72,6 +77,8 @@
         let btn = document.getElementById('btn');
         let mountains_front = document.getElementById('mountains_front');
         let header = document.querySelector('header');
+        let gradient = document.getElementById('gradient');
+        let sec = document.getElementById('sec');
         window.addEventListener('scroll', function(){
             let value = window.scrollY;
             stars.style.left = value * 0.25 +'px';
@@ -82,6 +89,9 @@
             text.style.marginTop = value * 1.5 +'px';
             btn.style.marginTop = value * 1.5 +'px';
             header.style.top = value * 0.5 + 'px';
+            gradient.style.bottom = value * 0.75 +'px';
+            sec.style.bottom = value * 0.25 + 'px';
+            
         })
     </script> 
 </body>
